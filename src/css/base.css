@@ -1,32 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap');
+@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
+  --black: #292929;
+  --accet-green: #00b068;
+  --white: #f0f0f0;
+  --light-grey: #e4e5e6;
+  --hover-grey: #bbb;
+  --light-accent: #bcdfd1;
+  --hover: #009156;
+  --black-dt: #1e2023;
+  --accet-green-dt: #14c57c;
+  --white-dt: #f0f0f0;
+  --charcoal-dt: #2a2d32;
+  --hover-charcoal-dt: #3b3f45;
+  --dark-accet-dt: #204136;
+  --hover-green-dt: #009156;
+  --error: #e74a3b;
+  --font-family: 'Poppins', sans-serif;
+  --second-family: 'Impact', sans-serif;
+  --third-family: 'Montserrat', sans-serif;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  font-family: var(--font-family);
   margin: 0;
+  background-color: #fff;
+  color: var(--black);
+  letter-spacing: -0.02em;
 }
 
-main {
-  flex-grow: 1;
+.black-theme {
+  color: var(--white);
 }
-main:has(.back-link) {
-  text-align: center;
+
+svg {
+  stroke: none;
+  fill: none;
+}
+
+p {
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  letter-spacing: 1.8px;
+  font-family: var(--second-family);
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 52px;
+  line-height: 64px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 136px;
+    line-height: 156px;
+  }
+
+  h2 {
+    font-size: 108px;
+    line-height: 124px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .caption {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
