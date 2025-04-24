@@ -63,6 +63,5 @@
 }
 
 .icon {
-  fill: #292929;
-  stroke: #292929;
+  stroke: var(--black);
 }
