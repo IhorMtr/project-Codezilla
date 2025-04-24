@@ -21,6 +21,8 @@
 | **icon-phone**               | ![icon-phone](./assets/phone.svg)                             |
 | **icon-success-filled**      | ![icon-success-filled](./assets/success-filled.svg)           |
 | **icon-user**                | ![icon-user](./assets/user.svg)                               |
+| **icon-burger-btn**          | ![icon-user](./assets/burger-btn.svg)                         |
+| **icon-x**                   | ![icon-user](./assets/x.svg)                                  |
 
 ---
 
