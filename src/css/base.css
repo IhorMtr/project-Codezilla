@@ -36,14 +36,6 @@ body {
   background-color: var(--white);
 }
 
-.black-theme-text {
-  color: var(--white);
-}
-
-.black-theme-background {
-  background: var(--black-dt);
-}
-
 svg {
   stroke: none;
   fill: none;
@@ -123,6 +115,10 @@ button {
   font-size: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -136,6 +132,10 @@ button {
   overflow: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+.black-theme-text {
+  color: var(--white);
+}
+
+.black-theme-background {
+  background: var(--black-dt);
 }
