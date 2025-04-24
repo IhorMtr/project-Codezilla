@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @font-face {
   font-family: 'Impact';
   src: url('../fonts/impact.ttf') format('truetype');
@@ -23,7 +23,6 @@
   --error: #e74a3b;
   --font-family: 'Poppins', sans-serif;
   --second-family: 'Impact', sans-serif;
-  --third-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -33,13 +32,16 @@
 body {
   font-family: var(--font-family);
   margin: 0;
-  background-color: #fff;
   color: var(--black);
-  letter-spacing: -0.02em;
+  background-color: var(--white);
 }
 
-.black-theme {
+.black-theme-text {
   color: var(--white);
+}
+
+.black-theme-background {
+  background: var(--black-dt);
 }
 
 svg {
