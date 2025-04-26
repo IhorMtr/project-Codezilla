@@ -14,11 +14,6 @@
   position: relative;
 }
 
-.tech-skills-item:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
 .tech-skills-item::before {
   content: '';
   position: absolute;
@@ -35,15 +30,10 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  text-transform: uppercase;
   background-color: var(--light-accent);
 }
 
 .marquee__inner {
-  display: flex;
   width: fit-content;
   animation: marqueeLine 20s linear infinite;
 }
@@ -106,5 +96,10 @@
 
   .tech-skills-item::before {
     bottom: -5px;
+  }
+
+  .tech-skills-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
 }
