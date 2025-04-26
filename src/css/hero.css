@@ -80,9 +80,9 @@ margin-bottom: 72px;
 }
 .hero-bgnd-img{
     background-image: url('../img/Frame\ 9114.png'); /* Изображение для обычных экранов */
-    background-size: cover;
+    /* background-size: cover; */
     /* background-position: center; */
     background-repeat: no-repeat;
     margin-bottom: 72px;
-    /* height: 100vh; */
+
 }
