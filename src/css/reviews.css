@@ -111,4 +111,14 @@
   .reviews-title {
     margin-bottom: 80px;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    transition: 0.3s ease-in-out;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: var(--light-grey);
+  }
 }
