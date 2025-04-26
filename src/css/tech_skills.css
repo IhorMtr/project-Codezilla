@@ -2,7 +2,6 @@
   display: flex;
   gap: 56px;
   padding: 32px 0;
-  background-color: var(--light-accent);
   align-items: center;
   justify-content: center;
 }
@@ -12,15 +11,19 @@
   font-size: 32px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  white-space: nowrap;
   position: relative;
+}
+
+.tech-skills-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .tech-skills-item::before {
   content: '';
   position: absolute;
   left: -56px;
-  bottom: 1px;
+  bottom: -8px;
   margin: 24px;
   border-radius: 2px;
   width: 8px;
@@ -29,6 +32,8 @@
 }
 
 .marquee {
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
   font-weight: 600;
@@ -45,7 +50,6 @@
 
 .marquee__line {
   flex-shrink: 0;
-  padding: 10px 15px;
   white-space: nowrap;
 }
 
@@ -58,8 +62,49 @@
   }
 }
 
+.tech-second-container {
+  transform: rotate(2deg);
+  background-color: var(--light-grey);
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.tech-second-list {
+  animation: marqueeLineReverse 20s linear infinite;
+}
+
+@keyframes marqueeLineReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.tech-second-list .tech-skills-item::before {
+  background-color: var(--black);
+}
+.tech-second-list .tech-skills-item {
+  color: var(--accet-green);
+}
+
 @media only screen and (min-width: 768px) {
   .tech-skills-list {
     padding: 40px;
+  }
+
+  .tech-skills-item {
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .tech-second-container {
+    margin-top: 5px;
+  }
+
+  .tech-skills-item::before {
+    bottom: -5px;
   }
 }
