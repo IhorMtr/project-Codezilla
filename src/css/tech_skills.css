@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
+  animation: marqueeLine 20s linear infinite;
 }
 
 .tech-skills-item {
@@ -44,12 +45,17 @@
   }
 }
 
-.tech-skills-list {
-  animation: marqueeLine 20s linear infinite;
+@keyframes marqueeLineReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .tech-second-list {
-  animation: marqueeLine 20s linear infinite reverse;
+  animation: marqueeLineReverse 20s linear infinite;
 }
 
 .tech-second-container {
