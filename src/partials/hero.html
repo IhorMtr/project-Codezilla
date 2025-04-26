@@ -1,16 +1,22 @@
 <section>
     <div class="container">
         <div class="hero-bgnd-img">
-    <h1 class="hero-headline">Hello, I am <Fullstack class="hero-color">Fullstack developer</span></h1>
+    <h1 class="hero-headline"><span class="hero-text-black">Hello, I am</span>
+        <picture class="hero-headline-img hidden ">
+        <source srcset="./img/webp/hero-img@2x.webp 2x, ./img/webp/hero-img.webp 1x" type="image/webp">
+        <img src="./img/webp/hero-img.webp" alt="Developer photo">
+    </picture><span class="hero-text-color">Fullstack developer</span></h1>
         <!--TODO: добавить ссылку на секцию work together-->
+        <div class="wrapper">
         <a href="" class="hero-btn">
             <svg class="hero-btn-arrow" width="30">
                 <use href="./img/icons/icons.svg#icon-arrow-right"></use>
             </svg>
-            <span class="hero-btn-text">Order the project</span>
+            <span class="caption">Order the project</span>
             <span class="hero-btn-rectangle"></span>
         </a> 
-        <p class="hero-text">I work with people all over the world to create <span class="hero-text-color">impressive</span> and <span class="hero-text-color">functional websites</span> that reflect each client’s unique personality. </p>
+        <p class="hero-text caption">I work with people all over the world to create <span class="hero-text-color">impressive</span> and <span class="hero-text-color">functional websites</span> that reflect each client’s unique personality. </p>
+    </div>
     </div>
         <ul class="hero-socials">
             <li><a href="https://www.instagram.com/goitclub/" target="_blank">Instagram</a></li>
