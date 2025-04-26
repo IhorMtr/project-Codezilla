@@ -37,8 +37,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   restartAnimation();
-
-  window.addEventListener('resize', () => {
-    restartAnimation();
-  });
 });
