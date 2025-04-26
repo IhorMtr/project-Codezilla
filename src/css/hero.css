@@ -1,15 +1,9 @@
 .hero-headline{
-/* font-weight: 400; */
-/* font-size: 64px; */
-/* line-height: 1.25; */
-/* letter-spacing: 0.03em; */
-/* text-transform: uppercase; */
+
 color: #292929;
 padding-top: 96px;
 margin-bottom: 40px;
-/* margin-left: auto; */
-/* margin-right: auto; */
-/* text-align: center; */
+
 }
 .hero-color{
     color: var(--accet-green);
@@ -19,21 +13,17 @@ margin-bottom: 40px;
     height: 92px;
     width: 100%;
     padding: 32px 0;
-    /* background-color:beige; */
     align-items: center;
     position: relative;
     margin-bottom: 40px;
-    /* border: 1px solid #00b068; */
+
 }
 
 .hero-btn-arrow{
-    /* padding-right: 12px; */
-    /* padding-left: 4px; */
+    
     stroke: #00b068;
     fill: #00b068;
-    /* width: 30px; */
-    /* height: 16px ; */
-    /* margin-left: 8px; */
+
     height: 100%;
 }
 .hero-btn-rectangle{
@@ -59,7 +49,7 @@ margin-left: 12px;
 .hero-text{
 font-weight: 400;
 font-size: 18px;
-line-height: 1.55556;
+line-height: 1.6;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #292929;
@@ -80,10 +70,39 @@ margin-bottom: 72px;
     margin-left: calc(-50vw + 50%); /* Центрирует фон относительно страницы */
 }
 .hero-bgnd-img{
-    background-image: url('../img/Frame\ 9114.png'); /* Изображение для обычных экранов */
-    /* background-size: cover; */
-    /* background-position: center; */
+    background-image: url('../img/Frame\ 9114.png'); 
     background-repeat: no-repeat;
     margin-bottom: 72px;
+
+}
+@media only screen and (min-width: 768px){
+    .hero-bgnd-img{
+        background-image: url('../img/hero-background-tablet.png');
+        margin-bottom: 80px;
+
+    }
+    .hero-btn{
+        width: 416px;
+        height: 96px;
+    }
+    .hero-btn-rectangle{
+        width: 261px;
+        height: 96px;
+    }
+    .hero-btn-text{
+        font-size: 20px;
+    }
+    .hero-headline{
+        padding-top: 72px;
+        margin-bottom: 60px;
+    }
+    .hero-text{
+        font-size: 20px;
+    }
+    .hero-socials{
+        flex-direction: row;
+        gap: 40px;
+        height: 104px;
+    }
 
 }
