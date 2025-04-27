@@ -71,9 +71,10 @@ margin-bottom: 72px;
     margin-left: calc(-50vw + 50%); /* Центрирует фон относительно страницы */
 }
 .hero-bgnd-img{
-    background-image: url('../img/Frame\ 9114.png'); 
+    background-image: url('../img/hero-background-mobile.png'); 
     background-repeat: no-repeat;
     padding-bottom: 72px;
+    background-size: contain;
 
 }
 .hero-headline-img{
@@ -145,6 +146,9 @@ margin-bottom: 72px;
     }
     .hero-btn:hover .hero-btn-rectangle{
         background: #00b068;
+    }
+    .hero-social-link:hover{
+        color: #00b068;
     }
 
 }
