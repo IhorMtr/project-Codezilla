@@ -63,6 +63,7 @@
   background-color: var(--light-grey);
   position: relative;
   z-index: 1;
+  margin-top: 5px;
 }
 
 .tech-second-list .tech-skills-item::before {
@@ -80,5 +81,9 @@
   .tech-skills-item {
     line-height: 1.33333;
     letter-spacing: 0.01em;
+  }
+
+  .tech-second-container {
+    margin-top: 3px;
   }
 }
