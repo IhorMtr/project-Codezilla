@@ -47,8 +47,8 @@
   gap: 24px;
   height: 232px;
   background-color: #e4e5e6;
-  width: 100vw; /* Занимает всю ширину окна */
-  margin-left: calc(-50vw + 50%); /* Центрирует фон относительно страницы */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 .hero-bgnd-img {
   background-image: url('../img/hero-background-mobile.png');
@@ -69,6 +69,13 @@
 }
 .wrapper {
   display: block;
+}
+.hero-social-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease-in-out;
 }
 @media only screen and (min-width: 768px) {
   .hero-bgnd-img {
