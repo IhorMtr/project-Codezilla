@@ -1,14 +1,3 @@
-/* .block-faq {
-  display: flex;
-  gap: 32px;
-}
-
-.accordion-container {
-  padding-top: 276px;
-  flex: 0 1 50%;
-  align-self: flex-end;
-} */
-
 .title-faq {
   margin-bottom: 40px;
 }
@@ -20,6 +9,7 @@
 .block-faq .ac {
   background-color: var(--white-dt);
   padding: 28px 24px;
+  border-bottom: 1px solid #e4e5e6;
 }
 
 .ac.is-active {
