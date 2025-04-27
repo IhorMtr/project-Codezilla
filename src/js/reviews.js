@@ -25,11 +25,11 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const observer = new IntersectionObserver(
+const reviewsObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        createMarkup();
+        createReviewsMarkup();
         observer.unobserve(entry.target);
       }
     });
@@ -43,7 +43,7 @@ const observer = new IntersectionObserver(
 async function getReviews() {
   try {
     const response = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reviews'
+      'https://portfolio-js.b.goit.study/api/reiews'
     );
     return response.data;
   } catch (error) {
@@ -53,13 +53,14 @@ async function getReviews() {
       backgroundColor: 'red',
       titleColor: '#fff',
       messageColor: '#fff',
+      position: 'topRight',
     });
-    const markup = createErrorMarkup();
+    const markup = createReviewsErrorMarkup();
     swiperWrapper.innerHTML = markup;
   }
 }
 
-async function createMarkup() {
+async function createReviewsMarkup() {
   const reviewsData = await getReviews();
   const createdMarkup = reviewsData.map(element => {
     return `<div class="swiper-slide">
@@ -73,10 +74,10 @@ async function createMarkup() {
   swiperWrapper.innerHTML = createdMarkup.join('');
 }
 
-function createErrorMarkup() {
+function createReviewsErrorMarkup() {
   return `<div class="swiper-slide">
           <p>Not found</p>
         </div>`;
 }
 
-observer.observe(reviewsSection);
+reviewsObserver.observe(reviewsSection);
