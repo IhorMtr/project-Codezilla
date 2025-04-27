@@ -43,7 +43,7 @@ const reviewsObserver = new IntersectionObserver(
 async function getReviews() {
   try {
     const response = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reiews'
+      'https://portfolio-js.b.goit.study/api/reviews'
     );
     return response.data;
   } catch (error) {
