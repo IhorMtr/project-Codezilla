@@ -19,14 +19,14 @@
 
 .block-faq .ac .ac-trigger {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   font-family: var(--font-family);
-  line-height: 160%;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--black);
   padding: 0;
-  padding-right: 48px;
+  padding-right: 46px;
 }
 
 .block-faq .ac .ac-trigger:focus {
@@ -75,6 +75,11 @@
 @media only screen and (min-width: 768px) {
   .title-faq {
     margin-bottom: 60px;
+  }
+
+  .block-faq .ac .ac-trigger {
+    font-size: 20px;
+    line-height: 1.6;
   }
 }
 
