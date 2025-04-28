@@ -1,0 +1,141 @@
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.body1 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+}
+
+.accet-green {
+  color: var(--accet-green);
+}
+
+.container-benefits {
+  position: relative;
+}
+
+.benefits-decor-image-container {
+  position: absolute;
+  top: -100px;
+  right: 0;
+}
+
+.benefits-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits-margin-row {
+  margin-top: -100px;
+}
+
+.benefits-col {
+  flex: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/* Optional: responsive columns */
+.benefits-col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.benefits-col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.benefits-col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.benefits-col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.benefits-col-8 {
+  flex: 0 0 66.6667%;
+  max-width: 66.6667%;
+}
+
+.benefit-item > div {
+  margin-top: 16px;
+}
+
+li.benefits-row:first-child {
+  margin-left: 66.6666%;
+}
+
+.benefit-item {
+  padding: 8px;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--light-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accet-green)
+}
+
+@media (prefers-color-scheme: dark) {
+  .benefit-icon {
+    background: var(--dark-accet-dt);
+  }
+}
+
+@media (max-width: 1280px) {
+  li.benefits-row:first-child {
+    margin-left: 50%;
+  }
+
+  .benefits-col-tablet-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .benefits-col-tablet-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .benefits-margin-row {
+    margin-top: 0;
+  }
+
+  .benefits-decor-image-container {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  li.benefits-row:first-child {
+    margin-left: 0;
+  }
+
+  .benefits-col-mobile-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .benefits-margin-row {
+    margin-top: 8px;
+  }
+}
+
+
