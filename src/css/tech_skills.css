@@ -1,0 +1,100 @@
+.tech-skills .container {
+  padding: 0;
+  max-width: 100vw;
+}
+
+.marquee {
+  --gap: 3.5rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  background-color: var(--light-accent);
+  z-index: 2;
+}
+
+.tech-skills-list {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  padding: 32px 0;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.tech-skills-item {
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.tech-skills-item::before {
+  content: '';
+  position: absolute;
+  left: -56px;
+  bottom: -4px;
+  margin: 24px;
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accet-green);
+}
+
+.tech-second-container {
+  transform: rotate(2deg);
+  background-color: var(--light-grey);
+  position: relative;
+  z-index: 1;
+  margin-top: 5px;
+}
+.tech-second-list .tech-skills-item::before {
+  background-color: var(--black);
+}
+.tech-second-list .tech-skills-item {
+  color: var(--accet-green);
+}
+
+.tech-second-list {
+  animation: scrollRever 25s linear infinite;
+}
+@keyframes scrollReverse {
+  from {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tech-skills-list {
+    padding: 40px;
+  }
+
+  .tech-skills-item {
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+  }
+
+  .tech-second-container {
+    margin-top: 3px;
+  }
+  .tech-skills .container {
+    padding: 0;
+    max-width: 100vw;
+  }
+}
