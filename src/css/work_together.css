@@ -3,8 +3,7 @@
 }
 
 .contacts-container {
-  /* background-color: var(--white); */
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .contacts-title {
@@ -67,7 +66,7 @@
   padding: 16px;
   background-color: var(--light-grey);
   transition-duration: 250ms;
-  font-family: var(--font-family);
+  font-family: inherit;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.5px;
@@ -92,7 +91,7 @@
   padding: 16px;
   background-color: var(--light-grey);
   transition-duration: 250ms;
-  font-family: var(--font-family);
+  font-family: inherit;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.5px;
@@ -154,8 +153,8 @@
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  transition: transform var(--transition);
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-modal-btn {
@@ -177,12 +176,11 @@
 
 .modal-btn-icon {
   stroke: var(--black);
+  overflow: visible;
 }
 
 .contacts-modal-title {
-  font-size: 20px;
   font-weight: 400;
-  line-height: 32px;
   color: var(--accet-green);
   margin-bottom: 16px;
 }
