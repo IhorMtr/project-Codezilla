@@ -1,5 +1,4 @@
 .about-me-headline {
-  font-size: 52px;
   margin-bottom: 40px;
 }
 .about-me-color-headline {
@@ -7,14 +6,13 @@
 }
 .about-me-img-wrapper {
   border-radius: 16px;
-  width: 320px;
+  max-width: 320px;
   height: 374px;
   display: inline-block;
   overflow: hidden;
   margin-bottom: 40px;
 }
 .about-me-bio-headline {
-  font-size: 32px;
   margin-bottom: 32px;
 }
 .about-me-bio-text {
@@ -27,7 +25,6 @@
   margin-bottom: 40px;
 }
 .about-me-education-headline {
-  font-size: 32px;
   margin-bottom: 32px;
 }
 
@@ -86,4 +83,31 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .about-me-headline {
+    font-size: 108px;
+  }
+  .about-me-img-wrapper {
+    width: 336px;
+    height: 392px;
+    flex-shrink: 0;
+  }
+  .wrap {
+    display: flex;
+    gap: 32px;
+  }
+  .about-me-img-wrapper {
+    margin-top: 408px;
+  }
+  .about-me-education,
+  .about-me-role {
+    flex: 1;
+  }
+  .about-me-section {
+    background-image: url('../img/abot-me-background-tablet.png');
+    background-size: 336px 252px;
+    background-position: 368px 856px;
+    background-repeat: no-repeat;
+  }
 }
