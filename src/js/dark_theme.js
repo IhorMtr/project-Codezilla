@@ -3,43 +3,60 @@ document.addEventListener('DOMContentLoaded', function() {
     const bodyElement = document.body;
     const modalElement = document.querySelector('.modal');
 
-    function toggleTextColor() {
-      const elements = document.querySelectorAll('body, body *:not(script):not(.span-last-name)');
-      elements.forEach(function(element) {
-        const computedColor = getComputedStyle(element).color;
-        if (computedColor === 'rgb(240, 240, 240)' || element.style.color === 'rgb(240, 240, 240)') {
-          element.style.color = '#292929';
-        } else if (computedColor === 'rgb(41, 41, 41)' || element.style.color === '') {
-          element.style.color = '#f0f0f0';
-        }
-      });
-    }
-  
-    function toggleTheme() {
-      const isDark = bodyElement.style.backgroundColor === 'rgb(30, 32, 35)';
-      
-      const newBgColor = isDark ? '#f0f0f0' : '#1e2023';
-      bodyElement.style.backgroundColor = newBgColor;
-      modalElement.style.backgroundColor = newBgColor;
-      toggleTextColor();
-      
-      document.querySelectorAll('.switch-light-svg').forEach(function(el) {
-        el.style.display = isDark ? 'block' : 'none';
-      });
-      
-      document.querySelectorAll('.switch-dark-svg').forEach(function(el) {
-        el.style.display = isDark ? 'none' : 'block';
-      });
-    }
-  
     function initTheme() {
-      const initialBgColor = '#f0f0f0';
-      bodyElement.style.backgroundColor = initialBgColor;
-      modalElement.style.backgroundColor = initialBgColor;
+        bodyElement.classList.remove('dark-theme');
+        modalElement.classList.remove('dark-theme');
+        
+        document.querySelectorAll('.switch-light-svg').forEach(function(element) {
+            element.style.display = 'block';
+        });
+        
+        document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
+            element.style.display = 'none';
+        });
     }
+
+    function toggleTextColors(isDark) {
+        const elements = document.querySelectorAll('body, body *:not(script):not(.span-last-name):not(.logo-header)');
+        const textColor = isDark ? 'var(--white)' : 'var(--black)';
+        
+        elements.forEach(element => {
+            element.style.color = textColor;
+        });
+    }
+
+    function toggleTheme() {
+        const isDark = bodyElement.classList.contains('dark-theme');
+        
+        if (isDark) {
+            bodyElement.classList.remove('dark-theme');
+            modalElement.classList.remove('dark-theme');
+            
+            document.querySelectorAll('.switch-light-svg').forEach(function(element) {
+                element.style.display = 'block';
+            });
+            
+            document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
+                element.style.display = 'none';
+            });
+        } else {
+            bodyElement.classList.add('dark-theme');
+            modalElement.classList.add('dark-theme');
+            
+            document.querySelectorAll('.switch-light-svg').forEach(function(element) {
+                element.style.display = 'none';
+            });
+            
+            document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
+                element.style.display = 'block';
+            });
+        }
+        toggleTextColors(!isDark);
+    }
+
     initTheme();
-  
+    
     switchButtons.forEach(function(button) {
-      button.addEventListener('click', toggleTheme);
+        button.addEventListener('click', toggleTheme);
     });
-  });
+});

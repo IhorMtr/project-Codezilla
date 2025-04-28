@@ -15,6 +15,11 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--black);
+    transition: color 0.3s;
+}
+
+.dark-theme .logo-header {
+    color: var(--white);
 }
 
 .span-last-name {
@@ -32,8 +37,7 @@
 }
 
 .burger-svg,
-.close-svg,
-.switcher-light {
+.close-svg {
     fill: var(--black);
     width: 32px;
     height: 32px;
@@ -156,12 +160,26 @@ body.no-scroll {
     padding: 0;
 }
 
-.switch-light-svg {
-
-}
-
 .switch-dark-svg {
     display: none;
     background-color: var(--black);
 }
 
+.dark-theme {
+    background-color: var(--black-dt);
+    color: var(--white);
+}
+
+.dark-theme .nav-item-link {
+    color: var(--white);
+}
+
+.dark-theme .nav-item-link:hover {
+    color: var(--accet-green-dt);
+}
+
+.dark-theme .burger-svg,
+.dark-theme .close-svg {
+    fill: var(--white);
+    stroke: var(--white);
+}
