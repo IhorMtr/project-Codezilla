@@ -134,12 +134,10 @@ html {
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  .black-theme-text {
-    color: var(--white);
-  }
+.black-theme-text {
+  color: var(--white);
+}
 
-  .black-theme-background {
-    background: var(--black-dt);
-  }
+.black-theme-background {
+  background: var(--black-dt);
 }
