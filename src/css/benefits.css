@@ -56,20 +56,14 @@ li.benefits-row:first-child {
 .benefit-icon svg {
   width: 24px;
   height: 24px;
-  stroke: var(--accet-green)
+  stroke: var(--accet-green);
 }
 
 .benefits-margin-row {
   margin-top: 8px;
 }
 
-@media (min-width: 767px) {
-  .benefits-decor-image-container {
-    display: block;
-    position: absolute;
-    top: -100px;
-    right: 0;
-  }
+@media (min-width: 768px) {
   li.benefits-row:first-child {
     margin-left: 0;
   }
@@ -93,8 +87,14 @@ li.benefits-row:first-child {
   li.benefits-row:first-child {
     margin-left: 50%;
   }
+  .benefits-decor-image-container {
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: 0;
+  }
 
-  .benefits-col-desktop-4{
+  .benefits-col-desktop-4 {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
@@ -103,8 +103,4 @@ li.benefits-row:first-child {
     flex: 0 0 66.6667%;
     max-width: 66.6667%;
   }
-
 }
-
-
-
