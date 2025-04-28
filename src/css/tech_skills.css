@@ -1,11 +1,31 @@
-.tech-skills-list {
+.marquee {
+  --gap: 3.5rem;
+  position: relative;
   display: flex;
-  gap: 56px;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  background-color: var(--light-accent);
+  z-index: 2;
+}
+
+.tech-skills-list {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
   padding: 32px 0;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  animation: marqueeLine 20s linear infinite;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }
 
 .tech-skills-item {
@@ -22,40 +42,12 @@
   content: '';
   position: absolute;
   left: -56px;
-  bottom: -5px;
+  bottom: -4px;
   margin: 24px;
   border-radius: 2px;
   width: 8px;
   height: 8px;
   background-color: var(--accet-green);
-}
-
-.marquee {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  background-color: var(--light-accent);
-}
-@keyframes marqueeLine {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes marqueeLineReverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-.tech-second-list {
-  animation: marqueeLineReverse 20s linear infinite;
 }
 
 .tech-second-container {
@@ -65,7 +57,6 @@
   z-index: 1;
   margin-top: 5px;
 }
-
 .tech-second-list .tech-skills-item::before {
   background-color: var(--black);
 }
@@ -73,6 +64,17 @@
   color: var(--accet-green);
 }
 
+.tech-second-list {
+  animation: scrollRever 25s linear infinite;
+}
+@keyframes scrollReverse {
+  from {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 @media only screen and (min-width: 768px) {
   .tech-skills-list {
     padding: 40px;
