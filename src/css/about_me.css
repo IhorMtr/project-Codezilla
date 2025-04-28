@@ -1,0 +1,89 @@
+.about-me-headline {
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+.about-me-color-headline {
+  color: var(--accet-green);
+}
+.about-me-img-wrapper {
+  border-radius: 16px;
+  width: 320px;
+  height: 374px;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.about-me-bio-headline {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+.about-me-bio-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+}
+.about-me-bio {
+  margin-bottom: 40px;
+}
+.about-me-education-headline {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.about-me-education-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-me-education-list-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-me-education-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #00b068;
+  font-size: 20px;
+  line-height: 1;
+}
+.about-me-education-list-item {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.about-me-education {
+  margin-bottom: 40px;
+}
+.about-me-role-headline {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.about-me-role-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-me-role-list-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-me-role-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #00b068;
+  font-size: 20px;
+  line-height: 1;
+}
+.about-me-role-list-item {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
