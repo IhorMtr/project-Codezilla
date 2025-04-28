@@ -8,12 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
     'TypeScript',
   ];
 
-  const list1 = document.getElementById('techSkillsList1');
-  const list2 = document.getElementById('techSkillsList2');
-  const list3 = document.getElementById('techSkillsList3');
-  const list4 = document.getElementById('techSkillsList4');
+  const lists = [
+    document.getElementById('techSkillsList1'),
+    document.getElementById('techSkillsList2'),
+    document.getElementById('techSkillsList3'),
+    document.getElementById('techSkillsList4'),
+  ];
 
-  function generateSkillsList(container) {
+  function generateSkillsList(container, skills) {
     const skillsRepeated = [...skills, ...skills];
     container.innerHTML = '';
     skillsRepeated.forEach(skill => {
@@ -24,21 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  generateSkillsList(list1);
-  generateSkillsList(list2);
-  generateSkillsList(list3);
-  generateSkillsList(list4);
+  lists.forEach(list => generateSkillsList(list, skills));
 
-  list1.style.animation = 'none';
-  list2.style.animation = 'none';
+  lists.forEach(list => {
+    list.style.animation = 'none';
+    void list.offsetWidth;
+  });
 
-  void list1.offsetWidth;
-  void list2.offsetWidth;
-  void list3.offsetWidth;
-  void list4.offsetWidth;
-
-  list1.style.animation = 'scroll 20s linear infinite';
-  list2.style.animation = 'scroll 20s linear infinite';
-  list3.style.animation = 'scrollReverse 20s linear infinite';
-  list4.style.animation = 'scrollReverse 20s linear infinite';
+  lists.forEach((list, index) => {
+    const animationName = index < 2 ? 'scroll' : 'scrollReverse';
+    list.style.animation = `${animationName} 20s linear infinite`;
+  });
 });
