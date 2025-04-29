@@ -8,13 +8,17 @@
     <script type="module" crossorigin src="/project-Codezilla/index.js"></script>
     <link rel="modulepreload" crossorigin href="/project-Codezilla/assets/vendor-Bchx-Eyt.js">
     <link rel="stylesheet" crossorigin href="/project-Codezilla/assets/vendor-Oe9dJBh6.css">
-    <link rel="stylesheet" crossorigin href="/project-Codezilla/assets/index-BrDkRhXu.css">
+    <link rel="stylesheet" crossorigin href="/project-Codezilla/assets/index-B6a8JycI.css">
   </head>
-  <body>
+  <body data-dark-class="dark-theme-cl-bg">
     <header>
   <div class="container">
     <a href="#" class="logo-header"
-      >lloyd<span class="span-header-last-name">jefferson.</span></a
+      >lloyd<span
+        class="span-header-last-name"
+        data-dark-class="dark-theme-green-color"
+        >jefferson.</span
+      ></a
     >
     <nav class="nav-title">
       <ul class="nav-list">
@@ -28,7 +32,7 @@
           <a class="nav-item-link" href="#about-me">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-item-link" href="#projects">Projects</a>
+          <a class="nav-item-link" href="#my_projects">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-item-link" href="#contacts">Contacts</a>
@@ -36,19 +40,33 @@
       </ul>
     </nav>
     <button class="burger-btn">
-      <svg class="burger-svg" width="32" height="32">
+      <svg
+        class="burger-svg"
+        width="32"
+        height="32"
+        data-dark-class="dark-theme-fill"
+      >
         <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-burger-btn"></use>
       </svg>
     </button>
   </div>
-  <div class="mobile-menu" id="mobile-menu" data-dark-class="dark-theme">
+  <div class="mobile-menu" id="mobile-menu" data-dark-class="dark-theme-cl-bg">
     <div class="mobile-menu-head">
       <a href="#" class="logo-header"
-        >lloyd<span class="span-header-last-name">jefferson.</span></a
+        >lloyd<span
+          class="span-header-last-name"
+          data-dark-class="dark-theme-green-color"
+          >jefferson.</span
+        ></a
       >
 
       <button class="mobile-close-btn">
-        <svg class="mobile-close-svg" width="32" height="32">
+        <svg
+          class="mobile-close-svg"
+          width="32"
+          height="32"
+          data-dark-class="dark-theme-stroke"
+        >
           <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-x"></use>
         </svg>
       </button>
@@ -65,7 +83,7 @@
           <a class="mobile-list-item-link" href="#about-me">About me</a>
         </li>
         <li class="mobile-list-item">
-          <a class="mobile-list-item-link" href="#projects">Projects</a>
+          <a class="mobile-list-item-link" href="#my_projects">Projects</a>
         </li>
         <li class="mobile-list-item">
           <a class="mobile-list-item-link" href="#contacts">Contacts</a>
@@ -77,37 +95,87 @@
 
     <main>
       <section>
-    <div class="container">
-        <div class="hero-bgnd-img">
-    <h1 class="hero-headline"><span class="hero-text-black">Hello, I am</span>
-        <picture class="hero-headline-img hidden ">
-        <source srcset="/project-Codezilla/assets/hero-img@2x-yHYarqOi.webp 2x, data:image/webp;base64,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 1x" type="image/webp">
-        <img src="data:image/webp;base64,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" alt="Developer photo">
-    </picture><span class="hero-text-color">Fullstack developer</span></h1>
-        <div class="wrapper">
+  <div class="container">
+    <div class="hero-bgnd-img">
+      <h1 class="hero-headline">
+        <span class="hero-text-black" data-dark-class="dark-theme-cl"
+          >Hello, I am</span
+        >
+        <picture class="hero-headline-img hidden">
+          <source
+            srcset="/project-Codezilla/assets/hero-img@2x-yHYarqOi.webp 2x, data:image/webp;base64,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 1x"
+            type="image/webp"
+          />
+          <img src="data:image/webp;base64,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" alt="Developer photo" /> </picture
+        ><span class="hero-text-color" data-dark-class="dark-theme-green-color"
+          >Fullstack developer</span
+        >
+      </h1>
+      <div class="wrapper">
         <a href="#contacts" class="hero-btn">
-            <svg class="hero-btn-arrow" width="30">
-                <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-arrow-right"></use>
-            </svg>
-            <span class="caption">Order the project</span>
-            <span class="hero-btn-rectangle"></span>
-        </a> 
-        <p class="hero-text caption">I work with people all over the world to create <span class="hero-text-color">impressive</span> and <span class="hero-text-color">functional websites</span> that reflect each client’s unique personality. </p>
+          <svg
+            class="hero-btn-arrow"
+            width="30"
+            data-dark-class="dark-theme-green-fill"
+          >
+            <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-arrow-right"></use>
+          </svg>
+          <span class="caption">Order the project</span>
+          <span
+            class="hero-btn-rectangle"
+            data-dark-class="dark-theme-green-background dark-theme-background-hover"
+          ></span>
+        </a>
+        <p class="hero-text caption">
+          I work with people all over the world to create
+          <span class="hero-text-color" data-dark-class="dark-theme-green-color"
+            >impressive</span
+          >
+          and
+          <span class="hero-text-color" data-dark-class="dark-theme-green-color"
+            >functional websites</span
+          >
+          that reflect each client’s unique personality.
+        </p>
+      </div>
     </div>
-    </div>
-        <ul class="hero-socials">
-            <li class="hero-social-link"><a href="https://www.instagram.com/goitclub/" target="_blank">Instagram</a></li>
-            <li class="hero-social-link"><a href="https://www.facebook.com/goITclub/" target="_blank">Facebook</a></li>
-            <li class="hero-social-link"><a href="https://www.linkedin.com/school/goit-start-your-career-in-it/" target="_blank">Linkedin</a></li>
-            <li class="hero-social-link"><a href="https://github.com/IhorMtr/project-Codezilla" target="_blank">GitHub</a></li>
-        </ul>
-</div>
+    <ul class="hero-socials" data-dark-class="dark-theme-charcoal-background">
+      <li class="hero-social-link">
+        <a href="https://www.instagram.com/goitclub/" target="_blank"
+          >Instagram</a
+        >
+      </li>
+      <li class="hero-social-link">
+        <a href="https://www.facebook.com/goITclub/" target="_blank"
+          >Facebook</a
+        >
+      </li>
+      <li class="hero-social-link">
+        <a
+          href="https://www.linkedin.com/school/goit-start-your-career-in-it/"
+          target="_blank"
+          >Linkedin</a
+        >
+      </li>
+      <li class="hero-social-link">
+        <a href="https://github.com/IhorMtr/project-Codezilla" target="_blank"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
 </section>
-      <section>
+
+      <section id="about-me">
   <div class="container">
     <div class="about-me-section">
       <h2 class="about-me-headline">
-        About <span class="about-me-color-headline">me</span>
+        About
+        <span
+          class="about-me-color-headline"
+          data-dark-class="dark-theme-green-color"
+          >me</span
+        >
       </h2>
       <div class="wrap">
         <div class="about-me-img-wrapper">
@@ -155,15 +223,24 @@
         <div class="about-me-education">
           <h3 class="about-me-education-headline">EDUCATION</h3>
           <ul class="about-me-education-list">
-            <li class="about-me-education-list-item">
+            <li
+              class="about-me-education-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
               2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
               York
             </li>
-            <li class="about-me-education-list-item">
+            <li
+              class="about-me-education-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
               2019 - 2020 / Advanced Web Development Certificate, GoIT IT
               School, New York
             </li>
-            <li class="about-me-education-list-item">
+            <li
+              class="about-me-education-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
               2020 - 2022 / Advanced Blender Animation Techniques, Udemy
             </li>
           </ul>
@@ -171,9 +248,24 @@
         <div class="about-me-role">
           <h3 class="about-me-role-headline">ROLE</h3>
           <ul class="about-me-role-list">
-            <li class="about-me-role-list-item">Frontend development</li>
-            <li class="about-me-role-list-item">HeadlessCMS, Wordpress</li>
-            <li class="about-me-role-list-item">Blender (enjoy)</li>
+            <li
+              class="about-me-role-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
+              Frontend development
+            </li>
+            <li
+              class="about-me-role-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
+              HeadlessCMS, Wordpress
+            </li>
+            <li
+              class="about-me-role-list-item"
+              data-dark-class="dark-theme-before-green-cl"
+            >
+              Blender (enjoy)
+            </li>
           </ul>
         </div>
       </div>
@@ -184,12 +276,15 @@
       <section class="tech-skills">
   <div class="container">
     <h2 class="visually-hidden">tech-skills</h2>
-    <div class="marquee">
+    <div class="marquee" data-dark-class="dark-theme-dark-green-background">
       <ul class="tech-skills-list" id="techSkillsList1"></ul>
 
       <ul aria-hidden="true" class="tech-skills-list" id="techSkillsList2"></ul>
     </div>
-    <div class="marquee tech-second-container">
+    <div
+      class="marquee tech-second-container"
+      data-dark-class="dark-theme-charcoal-background"
+    >
       <ul class="tech-skills-list tech-second-list" id="techSkillsList3"></ul>
       <ul
         aria-hidden="true"
@@ -201,18 +296,28 @@
 </section>
 
       <section id="my_projects">
-    <div class="container">
-    <h2 class="my_projects-header">MY <span class="my_projects-span">PROJECTS</span></h2>
-    <ul class="my_projects-list">
-    
-    </ul>
-    <button type="button" id="load-more">Load more
-        <div class="load-more-line"></div>
+  <div class="container">
+    <h2 class="my_projects-header">
+      MY
+      <span class="my_projects-span" data-dark-class="dark-theme-green-color"
+        >PROJECTS</span
+      >
+    </h2>
+    <ul class="my_projects-list"></ul>
+    <button
+      type="button"
+      id="load-more"
+      data-dark-class="dark-theme-cl dark-theme-green-color-hover"
+    >
+      Load more
+      <div
+        class="load-more-line"
+        data-dark-class="dark-theme-green-background"
+      ></div>
     </button>
-    </div>
-
-
+  </div>
 </section>
+
       <section>
   <div class="container container-benefits">
     <div class="benefits-row">
@@ -222,7 +327,12 @@
         <div class="benefits-decor-image-container">
           <img src="/project-Codezilla/assets/decor-bg-3-Ddm4OTOf.png" />
         </div>
-        <h2><span class="accet-green">Benefits</span> of working with me</h2>
+        <h2>
+          <span class="accet-green" data-dark-class="dark-theme-green-color"
+            >Benefits</span
+          >
+          of working with me
+        </h2>
       </div>
     </div>
 
@@ -234,8 +344,11 @@
         class="benefits-col-12 benefits-col-tablet-6 benefits-col-desktop-4 benefit-item"
       >
         <div class="benefits-row">
-          <div class="benefit-icon">
-            <svg>
+          <div
+            class="benefit-icon"
+            data-dark-class="dark-theme-dark-green-background"
+          >
+            <svg data-dark-class="dark-theme-green-stroke">
               <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-user"></use>
             </svg>
           </div>
@@ -254,8 +367,11 @@
         class="benefits-col-12 benefits-col-tablet-6 benefits-col-desktop-4 benefit-item"
       >
         <div class="benefits-row">
-          <div class="benefit-icon">
-            <svg>
+          <div
+            class="benefit-icon"
+            data-dark-class="dark-theme-dark-green-background"
+          >
+            <svg data-dark-class="dark-theme-green-stroke">
               <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-message-chat-circle"></use>
             </svg>
           </div>
@@ -275,8 +391,11 @@
         class="benefits-col-12 benefits-col-tablet-6 benefits-col-desktop-4 benefit-item"
       >
         <div class="benefits-row">
-          <div class="benefit-icon">
-            <svg>
+          <div
+            class="benefit-icon"
+            data-dark-class="dark-theme-dark-green-background"
+          >
+            <svg data-dark-class="dark-theme-green-stroke">
               <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-brush"></use>
             </svg>
           </div>
@@ -296,8 +415,11 @@
         class="benefits-col-12 benefits-col-tablet-6 benefits-col-desktop-4 benefit-item"
       >
         <div class="benefits-row">
-          <div class="benefit-icon">
-            <svg>
+          <div
+            class="benefit-icon"
+            data-dark-class="dark-theme-dark-green-background"
+          >
+            <svg data-dark-class="dark-theme-green-stroke">
               <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-hourglass"></use>
             </svg>
           </div>
@@ -320,15 +442,26 @@
   <div class="container">
     <div class="block-faq">
       <h2 class="title-faq">
-        frequently asked <span class="span-title-faq">question</span>
+        frequently asked
+        <span class="span-title-faq" data-dark-class="dark-theme-green-color"
+          >question</span
+        >
       </h2>
       <div class="accordion-container">
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               What programming languages ​​are most often used in your project?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -337,7 +470,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               In the field of web development, there are various technologies
               and programming languages. Typically, this includes a combination
               of frontend (client side) and backend (server side) languages.
@@ -345,12 +478,20 @@
           </div>
         </div>
 
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               What are the deadlines for the project?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -359,7 +500,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               The terms of project implementation depend to a large extent on a
               number of factors, such as the scope of the project, its
               complexity, and the availability of resources. Determining exact
@@ -369,12 +510,20 @@
           </div>
         </div>
 
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               What payment methods do you accept?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -383,7 +532,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               Payment through credit and debit cards such as Visa, MasterCard,
               specialized electronic payment systems such as PayPal, as well as
               payments in cryptocurrencies such as Bitcoin, Ethereum and others.
@@ -391,12 +540,20 @@
           </div>
         </div>
 
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               How can I contact you?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -405,7 +562,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               In the field of web development, there are various technologies
               and programming languages. Typically, this includes a combination
               of frontend (client side) and backend (server side) languages.
@@ -413,12 +570,20 @@
           </div>
         </div>
 
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               Do you provide advice or support?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -427,7 +592,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               The terms of project implementation depend to a large extent on a
               number of factors, such as the scope of the project, its
               complexity, and the availability of resources. Determining exact
@@ -437,13 +602,21 @@
           </div>
         </div>
 
-        <div class="ac">
+        <div
+          class="ac"
+          data-dark-class="dark-theme-bg-transperent dark-theme-border-none"
+          data-dark-class-active="dark-theme-dark-green-background"
+        >
           <h2 class="ac-header">
-            <button type="button" class="ac-trigger">
+            <button
+              type="button"
+              class="ac-trigger"
+              data-dark-class="dark-theme-cl"
+            >
               What does the process of developing a software product look like
               from idea to implementation?
               <span class="ac-span-icon">
-                <svg class="ac-icon">
+                <svg class="ac-icon" data-dark-class="dark-theme-stroke">
                   <use
                     xlink:href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-chevron-down"
                   ></use>
@@ -452,7 +625,7 @@
             </button>
           </h2>
           <div class="ac-panel">
-            <p class="ac-text">
+            <p class="ac-text" data-dark-class="dark-theme-cl">
               Payment through credit and debit cards such as Visa, MasterCard,
               specialized electronic payment systems such as PayPal, as well as
               payments in cryptocurrencies such as Bitcoin, Ethereum and others.
@@ -470,13 +643,25 @@
     <ul class="swiper">
       <li class="swiper-wrapper"></li>
       <li class="swiper-button-wrapper">
-        <div class="swiper-button-prev">
-          <svg class="swiper-button-icon-prev">
+        <div
+          class="swiper-button-prev"
+          data-dark-class="dark-theme-border-full dark-theme-charcoal-background-hover"
+        >
+          <svg
+            class="swiper-button-icon-prev"
+            data-dark-class="dark-theme-stroke"
+          >
             <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-arrow-narrow-right"></use>
           </svg>
         </div>
-        <div class="swiper-button-next">
-          <svg class="swiper-button-icon-next">
+        <div
+          class="swiper-button-next"
+          data-dark-class="dark-theme-border-full dark-theme-charcoal-background-hover"
+        >
+          <svg
+            class="swiper-button-icon-next"
+            data-dark-class="dark-theme-stroke"
+          >
             <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-arrow-narrow-right"></use>
           </svg>
         </div>
@@ -486,9 +671,12 @@
 </section>
 
       <section class="contacts" id="contacts">
-  <div class="contacts-container container">
+  <div class="contacts-container container" data-dark-class="dark-theme-cl-bg">
     <h2 class="contacts-title">
-      Let's <span class="main-color">work together</span>
+      Let's
+      <span class="main-color" data-dark-class="dark-theme-green-color"
+        >work together</span
+      >
     </h2>
     <div class="contacts-info">
       <div class="contacts-info-text">
@@ -498,7 +686,12 @@
         <address class="contacts-address">
           <ul>
             <li>
-              <svg class="contacts-icon" width="24" height="24">
+              <svg
+                class="contacts-icon"
+                width="24"
+                height="24"
+                data-dark-class="dark-theme-green-stroke"
+              >
                 <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-phone"></use>
               </svg>
               <a class="contacts-link" href="tel:+380904567890" target="_blank"
@@ -506,7 +699,12 @@
               >
             </li>
             <li>
-              <svg class="contacts-icon" width="24" height="24">
+              <svg
+                class="contacts-icon"
+                width="24"
+                height="24"
+                data-dark-class="dark-theme-green-stroke"
+              >
                 <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-mail"></use>
               </svg>
               <a
@@ -517,7 +715,12 @@
               >
             </li>
             <li>
-              <svg class="contacts-icon" width="24" height="24">
+              <svg
+                class="contacts-icon"
+                width="24"
+                height="24"
+                data-dark-class="dark-theme-green-stroke"
+              >
                 <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-location"></use>
               </svg>
               <a class="contacts-link" href="" target="_blank">USA, New York</a>
@@ -527,7 +730,12 @@
       </div>
       <form class="contacts-form">
         <label class="input-wrap">
-          <svg class="success-filled visually-hidden" width="16" height="16">
+          <svg
+            class="success-filled visually-hidden"
+            width="16"
+            height="16"
+            data-dark-class="dark-theme-green-fill"
+          >
             <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-success-filled"></use>
           </svg>
           <input
@@ -536,24 +744,45 @@
             name="email"
             placeholder="Your email*"
             required
+            data-dark-class="dark-theme-cl dark-theme-cl-placeholder dark-theme-charcoal-background"
           />
           <span class="error-message visually-hidden"
             >Invalid email, try again</span
           >
         </label>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Send message</button>
+        <textarea
+          name="message"
+          placeholder="Message"
+          data-dark-class="dark-theme-cl dark-theme-cl-placeholder dark-theme-charcoal-background"
+        ></textarea>
+        <button
+          type="submit"
+          data-dark-class="dark-theme-green-background dark-theme-background-hover"
+        >
+          Send message
+        </button>
       </form>
     </div>
   </div>
   <div class="contacts-backdrop contacts-is-hidden">
-    <div class="contacts-modal">
+    <div
+      class="contacts-modal"
+      data-dark-class="dark-theme-charcoal-background"
+    >
       <button type="button" class="contacts-modal-btn" data-modal-close>
-        <svg class="modal-btn-icon" width="24" height="24">
+        <svg
+          class="modal-btn-icon"
+          width="24"
+          height="24"
+          data-dark-class="dark-theme-stroke"
+        >
           <use href="/project-Codezilla/assets/icons-nD2TS3l1.svg#icon-x"></use>
         </svg>
       </button>
-      <h3 class="contacts-modal-title caption">
+      <h3
+        class="contacts-modal-title caption"
+        data-dark-class="dark-theme-green-color"
+      >
         Thank you for your interest in cooperation!
       </h3>
       <p class="contacts-modal-text">
@@ -568,17 +797,27 @@
     <footer>
   <div class="container footer-container">
     <div class="flex-link">
-      <a class="footer-logo" href="#header"
-        >lloyd<span class="footer-last-name">jefferson.</span></a
+      <a class="footer-logo" href="#header" data-dark-class="dark-theme-cl"
+        >lloyd<span
+          class="footer-last-name"
+          data-dark-class="dark-theme-green-color"
+          >jefferson.</span
+        ></a
       >
       <ul class="footer-list">
         <li class="footer-social-link">
-          <a href="https://www.instagram.com/goitclub/" target="_blank"
+          <a
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            data-dark-class="dark-theme-cl dark-theme-green-color-hover"
             >Instagram</a
           >
         </li>
         <li class="footer-social-link">
-          <a href="https://www.facebook.com/goITclub/" target="_blank"
+          <a
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            data-dark-class="dark-theme-cl dark-theme-green-color-hover"
             >Facebook</a
           >
         </li>
@@ -586,18 +825,22 @@
           <a
             href="https://www.linkedin.com/school/goit-start-your-career-in-it/"
             target="_blank"
+            data-dark-class="dark-theme-cl dark-theme-green-color-hover"
             >Linkedin</a
           >
         </li>
         <li class="footer-social-link">
-          <a href="https://github.com/IhorMtr/project-Codezilla" target="_blank"
+          <a
+            href="https://github.com/IhorMtr/project-Codezilla"
+            target="_blank"
+            data-dark-class="dark-theme-cl dark-theme-green-color-hover"
             >GitHub</a
           >
         </li>
       </ul>
     </div>
     <div class="footer-copyright">
-      <p class="footer-copyright-link">
+      <p class="footer-copyright-link" data-dark-class="dark-theme-cl">
         &copy; Copyright 2024. Made by LloydJefferson
       </p>
     </div>
