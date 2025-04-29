@@ -19,11 +19,21 @@
 
 .footer-social-link {
   margin-bottom: 24px;
+  transition: 0.3s;
+}
+
+.footer-social-link a {
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--black);
+  transition: 0.3s;
 }
+
+.footer-social-link a:hover {
+  color: var(--accet-green);
+}
+
 
 .footer-social-link:last-child {
   margin-bottom: 0;
@@ -46,6 +56,12 @@
   font-weight: 300;
   letter-spacing: 0.03em;
   color: var(--black);
+  line-height: 1.5;
+  transition: 0.3ms;
+}
+
+.footer-copyright-link:hover {
+  color: var(--accet-green);
 }
 
 @media only screen and (min-width: 768px) {
