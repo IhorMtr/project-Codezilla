@@ -3,6 +3,10 @@
   background: var(--black-dt) !important;
 }
 
+.dark-theme-cl {
+  color: var(--white) !important;
+}
+
 .dark-theme-stroke {
   stroke: var(--white) !important;
 }
@@ -28,13 +32,13 @@
 }
 
 .dark-theme-green-background {
-  background-color: var(--hover) !important;
-}
-
-.dark-theme-background-hover:hover {
   background-color: var(--accet-green-dt) !important;
 }
 
+.dark-theme-background-hover:hover {
+  background-color: var(--hover) !important;
+}
+
 .dark-theme-charcoal-background {
-  background: var(--charcoal-dt);
+  background: var(--charcoal-dt) !important;
 }
