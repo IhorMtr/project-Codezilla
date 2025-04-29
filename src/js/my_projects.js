@@ -1,65 +1,66 @@
 const projects = [
   {
-    image: './img/rectangle_10.webp',
+    image: './img/webp/rectangle_10',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'power pulse webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_7.webp',
+    image: './img/webp/rectangle_7',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'mimino website',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_8.webp',
+    image: './img/webp/rectangle_8',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'vyshyvanka vibes Landing Page',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_9.webp',
+    image: './img/webp/rectangle_9',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'green harvest online store',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_11.webp',
+    image: './img/webp/rectangle_11',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'wallet webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_6.webp',
+    image: './img/webp/rectangle_6',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'chego jewelry website',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_4.webp',
+    image: './img/webp/rectangle_4',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'energy flow webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_5.webp',
+    image: './img/webp/rectangle_5',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'fruitbox online store',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_12.webp',
+    image: './img/webp/rectangle_12',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'English excellence webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/first_screen_1.webp',
+    image: './img/webp/first_screen_1',
     stack: 'React, JavaScript, Node JS, Git',
     name: 'starlight studio landing page',
-    link: ''
-  }
+    link: '',
+  },
 ];
+
 const projectList = document.querySelector('.my_projects-list');
 const loadMoreButton = document.getElementById('load-more');
 
@@ -67,15 +68,17 @@ let projectsLoaded = 0;
 const projectsPerClick = 3;
 
 function createMarkup(arr) {
-  return arr.map(item => `
+  return arr
+    .map(
+      item => `
     <li class="my_projects-item">
       <picture>
         <source
-          srcset="${item.image.replace('.webp', '-1x.webp')} 1x, ${item.image.replace('.webp', '-2x.webp')} 2x"
+          srcset="${item.image}-1x.webp 1x, ${item.image}-2x.webp 2x"
           type="image/webp"
         />
         <img 
-          src="${item.image.replace('.webp', '-1x.webp')}" 
+          src="${item.image}-1x.webp" 
           alt="${item.name}" 
           class="my_projects-img" 
           loading="lazy" 
@@ -96,12 +99,17 @@ function createMarkup(arr) {
         </a>
       </div>
     </li>
-  `).join('');
+  `
+    )
+    .join('');
 }
-function loadProjects() {
-  const slice = projects.slice(projectsLoaded, projectsLoaded + projectsPerClick);
-  projectList.insertAdjacentHTML('beforeend', createMarkup(slice));
 
+function loadProjects() {
+  const slice = projects.slice(
+    projectsLoaded,
+    projectsLoaded + projectsPerClick
+  );
+  projectList.insertAdjacentHTML('beforeend', createMarkup(slice));
   projectsLoaded += projectsPerClick;
 
   if (projectsLoaded >= projects.length) {
