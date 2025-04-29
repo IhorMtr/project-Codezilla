@@ -111,3 +111,24 @@
     background-repeat: no-repeat;
   }
 }
+
+@media only screen and (min-width: 1280px) {
+  .about-me-img-wrapper {
+    width: 384px;
+    height: 448px;
+    margin-top: 312px;
+  }
+  .wrap {
+    margin-left: 208px;
+    gap: 136px;
+    justify-content: flex-end;
+  }
+  .about-me-bio {
+    width: 488px;
+    height: 488px;
+  }
+  .about-me-section {
+    background-position: 864px 692px;
+    background-size: 384px 288px;
+  }
+}
