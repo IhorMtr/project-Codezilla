@@ -1,5 +1,5 @@
 .footer-logo {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   font-size: 32px;
   font-weight: 400;
   line-height: 1;
@@ -71,5 +71,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+  }
+
+  .footer-list {
+    margin: 0;
   }
 }
