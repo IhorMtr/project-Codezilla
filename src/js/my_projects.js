@@ -124,9 +124,9 @@ function createMarkup(arr) {
           <p class="my_projects-item-stack">${item.stack}</p>
           <h3 class="my_projects-item-header">${item.name}</h3>
         </div>
-        <a href="${item.link}" target="_blank" class="my_projects-button">
+        <a href="${item.link}" target="_blank" class="my_projects-button" data-dark-class="dark-theme-charcoal-background dark-theme-charcoal-background-hover">
           VISIT
-          <svg class="my_projects-icon" width="24" height="24">
+          <svg class="my_projects-icon" width="24" height="24" data-dark-class="dark-theme-green-stroke dark-theme-green-fill">
             <use href="${iconsSprite}#icon-diagonal-arrow"></use>
           </svg>
         </a>

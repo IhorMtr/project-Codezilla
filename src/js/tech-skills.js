@@ -15,18 +15,26 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('techSkillsList4'),
   ];
 
-  function generateSkillsList(container, skills) {
+  const darkClassGroup1 = 'dark-theme-before-green-bg';
+  const darkClassGroup2 = 'dark-theme-white-before-bg dark-theme-green-color';
+
+  function generateSkillsList(container, skills, darkClassValue) {
     const skillsRepeated = [...skills, ...skills];
     container.innerHTML = '';
+
     skillsRepeated.forEach(skill => {
       const li = document.createElement('li');
       li.textContent = skill;
       li.className = 'tech-skills-item';
+      li.dataset.darkClass = darkClassValue;
       container.appendChild(li);
     });
   }
 
-  lists.forEach(list => generateSkillsList(list, skills));
+  lists.forEach((list, index) => {
+    const darkClassValue = index < 2 ? darkClassGroup1 : darkClassGroup2;
+    generateSkillsList(list, skills, darkClassValue);
+  });
 
   lists.forEach(list => {
     list.style.animation = 'none';
@@ -37,4 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const animationName = index < 2 ? 'scroll' : 'scrollReverse';
     list.style.animation = `${animationName} 20s linear infinite`;
   });
+
+  if (window.applyCurrentTheme) {
+    window.applyCurrentTheme();
+  }
 });

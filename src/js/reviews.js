@@ -57,13 +57,17 @@ async function getReviews() {
     });
     const markup = createReviewsErrorMarkup();
     swiperWrapper.innerHTML = markup;
+
+    if (window.applyCurrentTheme) {
+      window.applyCurrentTheme();
+    }
   }
 }
 
 async function createReviewsMarkup() {
   const reviewsData = await getReviews();
   const createdMarkup = reviewsData.map(element => {
-    return `<div class="swiper-slide">
+    return `<div class="swiper-slide" data-dark-class="dark-theme-charcoal-background">
           <blockquote class="swiper-slide-text">${element.review}</blockquote>
           <div class="swiper-slide-content-wrapper">
             <img src="${element.avatar_url}" alt="Blockquote author" class="swiper-slide-image" />
@@ -72,10 +76,14 @@ async function createReviewsMarkup() {
         </div>`;
   });
   swiperWrapper.innerHTML = createdMarkup.join('');
+
+  if (window.applyCurrentTheme) {
+    window.applyCurrentTheme();
+  }
 }
 
 function createReviewsErrorMarkup() {
-  return `<div class="swiper-slide">
+  return `<div class="swiper-slide" data-dark-class="dark-theme-charcoal-background">
           <p>Not found</p>
         </div>`;
 }

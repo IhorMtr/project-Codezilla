@@ -1,10 +1,20 @@
 .dark-theme-cl-bg {
   color: var(--white) !important;
-  background: var(--black-dt) !important;
+  background-color: var(--black-dt) !important;
 }
 
 .dark-theme-cl {
   color: var(--white) !important;
+}
+
+.dark-theme-cl-placeholder::placeholder {
+  color: var(--white) !important;
+}
+
+.dark-theme-border-none {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
 }
 
 .dark-theme-stroke {
@@ -15,6 +25,14 @@
   fill: var(--white) !important;
 }
 
+.dark-theme-green-stroke {
+  stroke: var(--accet-green-dt) !important;
+}
+
+.dark-theme-green-fill {
+  fill: var(--accet-green-dt) !important;
+}
+
 .dark-theme-border-full {
   border: 1px solid var(--white) !important;
 }
@@ -23,8 +41,20 @@
   border-bottom: 1px solid var(--white) !important;
 }
 
+.dark-theme-bg-transperent {
+  background-color: transparent !important;
+}
+
 .dark-theme-green-color {
   color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-green-color-hover:hover {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-white-before-bg::before {
+  background-color: var(--white) !important;
 }
 
 .dark-theme-dark-green-background {
@@ -40,5 +70,17 @@
 }
 
 .dark-theme-charcoal-background {
-  background: var(--charcoal-dt) !important;
+  background-color: var(--charcoal-dt) !important;
+}
+
+.dark-theme-charcoal-background-hover:hover {
+  background-color: var(--hover-charcoal-dt) !important;
+}
+
+.dark-theme-before-green-cl::before {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-before-green-bg::before {
+  background-color: var(--accet-green-dt) !important;
 }

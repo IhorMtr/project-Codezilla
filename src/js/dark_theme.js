@@ -3,18 +3,36 @@ document.addEventListener('DOMContentLoaded', function () {
   const themeSwitches = document.querySelectorAll(
     '.switch-header input[type="checkbox"]'
   );
-  const darkThemeElements = document.querySelectorAll('[data-dark-class]');
 
   function toggleDarkTheme(enable) {
+    const darkThemeElements = document.querySelectorAll('[data-dark-class]');
     darkThemeElements.forEach(el => {
-      const classNames = el.dataset.darkClass;
-      if (classNames) {
-        classNames.split(' ').forEach(className => {
-          el.classList.toggle(className, enable);
+      const baseClass = el.dataset.darkClass;
+      const activeClass = el.dataset.darkClassActive;
+
+      if (baseClass) {
+        baseClass.split(' ').forEach(className => {
+          if (className.trim()) {
+            el.classList.toggle(className, enable);
+          }
+        });
+      }
+
+      if (activeClass) {
+        const shouldApply = enable && el.classList.contains('is-active');
+        activeClass.split(' ').forEach(className => {
+          if (className.trim()) {
+            el.classList.toggle(className, shouldApply);
+          }
         });
       }
     });
   }
+
+  window.applyCurrentTheme = function () {
+    const isDarkSaved = localStorage.getItem(THEME_KEY) === 'true';
+    toggleDarkTheme(isDarkSaved);
+  };
 
   const isDarkSaved = localStorage.getItem(THEME_KEY) === 'true';
 
