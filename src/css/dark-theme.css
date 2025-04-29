@@ -1,0 +1,36 @@
+.dark-theme-cl-bg {
+  color: var(--white) !important;
+  background: var(--black-dt) !important;
+}
+
+.dark-theme-stroke {
+  stroke: var(--white) !important;
+}
+
+.dark-theme-fill {
+  fill: var(--white) !important;
+}
+
+.dark-theme-border-full {
+  border: 1px solid var(--white) !important;
+}
+
+.dark-theme-border-bottom {
+  border-bottom: 1px solid var(--white) !important;
+}
+
+.dark-theme-green-color {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-dark-green-background {
+  background: var(--dark-accet-dt) !important;
+}
+
+.dark-theme-green-background {
+  background: var(--accet-green-dt) !important;
+}
+
+.dark-theme-background-hover {
+  background: var(--hover);
+}
