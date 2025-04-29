@@ -7,3 +7,13 @@ const accordions = Array.from(
 new Accordion(accordions, {
   openOnInit: [0],
 });
+
+document.querySelectorAll('.ac-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    setTimeout(() => {
+      if (window.applyCurrentTheme) {
+        window.applyCurrentTheme();
+      }
+    }, 10);
+  });
+});

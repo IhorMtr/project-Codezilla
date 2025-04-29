@@ -1,0 +1,86 @@
+.dark-theme-cl-bg {
+  color: var(--white) !important;
+  background-color: var(--black-dt) !important;
+}
+
+.dark-theme-cl {
+  color: var(--white) !important;
+}
+
+.dark-theme-cl-placeholder::placeholder {
+  color: var(--white) !important;
+}
+
+.dark-theme-border-none {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.dark-theme-stroke {
+  stroke: var(--white) !important;
+}
+
+.dark-theme-fill {
+  fill: var(--white) !important;
+}
+
+.dark-theme-green-stroke {
+  stroke: var(--accet-green-dt) !important;
+}
+
+.dark-theme-green-fill {
+  fill: var(--accet-green-dt) !important;
+}
+
+.dark-theme-border-full {
+  border: 1px solid var(--white) !important;
+}
+
+.dark-theme-border-bottom {
+  border-bottom: 1px solid var(--white) !important;
+}
+
+.dark-theme-bg-transperent {
+  background-color: transparent !important;
+}
+
+.dark-theme-green-color {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-green-color-hover:hover {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-white-before-bg::before {
+  background-color: var(--white) !important;
+}
+
+.dark-theme-dark-green-background {
+  background-color: var(--dark-accet-dt) !important;
+}
+
+.dark-theme-green-background {
+  background-color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-background-hover:hover {
+  background-color: var(--hover) !important;
+}
+
+.dark-theme-charcoal-background {
+  background-color: var(--charcoal-dt) !important;
+}
+
+.dark-theme-charcoal-background-hover:hover {
+  background-color: var(--hover-charcoal-dt) !important;
+}
+
+.dark-theme-before-green-cl::before {
+  color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-before-green-bg::before {
+  background-color: var(--accet-green-dt) !important;
+}

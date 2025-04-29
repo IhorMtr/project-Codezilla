@@ -12,6 +12,10 @@
   border-bottom: 1px solid #e4e5e6;
 }
 
+.block-faq .ac.is-active {
+  border-bottom: none;
+}
+
 .ac.is-active {
   background-color: var(--light-accent);
   border-radius: 16px;
