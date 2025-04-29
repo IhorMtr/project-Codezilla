@@ -45,10 +45,15 @@
     gap: 12px;
     border: 0;
 }
+.my_projects-icon{
+    fill: #00B068;
+    stroke: #00B068;
+}
 .my_projects-button:hover, .my_projects-button:focus{
     background-color: #bbb;
     transition: 0.7s;
 }
+
 #my_projects .container {
     display: flex;
     flex-direction: column;
