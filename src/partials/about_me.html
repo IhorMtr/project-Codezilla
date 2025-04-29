@@ -8,6 +8,23 @@
         <div class="about-me-img-wrapper">
           <picture>
             <source
+              media="(min-width: 1280px)"
+              srcset="
+                ../img/webp/about-me-dt@2x.webp 2x,
+                ../img/webp/about-me-dt.webp    1x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ../img/webp/about-me-tablet@2x.webp 2x,
+                ../img/webp/about-me-tablet.webp    1x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 767px)"
               srcset="
                 ../img/webp/about-me@2x.webp 2x,
                 ../img/webp/about-me.webp    1x
@@ -19,7 +36,7 @@
         </div>
         <div class="about-me-bio">
           <h3 class="about-me-bio-headline">BIO</h3>
-          <p>
+          <p class="about-me-bio-text">
             I'm Lloyd Jefferson, a talented programmer specializing in software
             development. My expertise spans various programming languages and
             technologies, and I am dedicated to continually enhancing my skills.
