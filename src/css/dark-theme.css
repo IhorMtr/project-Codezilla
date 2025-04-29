@@ -24,13 +24,17 @@
 }
 
 .dark-theme-dark-green-background {
-  background: var(--dark-accet-dt) !important;
+  background-color: var(--dark-accet-dt) !important;
 }
 
 .dark-theme-green-background {
-  background: var(--accet-green-dt) !important;
+  background-color: var(--hover) !important;
 }
 
-.dark-theme-background-hover {
-  background: var(--hover);
+.dark-theme-background-hover:hover {
+  background-color: var(--accet-green-dt) !important;
+}
+
+.dark-theme-charcoal-background {
+  background: var(--charcoal-dt);
 }
