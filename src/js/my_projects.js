@@ -1,65 +1,99 @@
+import rectangle10_1x from '../img/webp/rectangle_10-1x.webp';
+import rectangle10_2x from '../img/webp/rectangle_10-2x.webp';
+import rectangle7_1x from '../img/webp/rectangle_7-1x.webp';
+import rectangle7_2x from '../img/webp/rectangle_7-2x.webp';
+import rectangle8_1x from '../img/webp/rectangle_8-1x.webp';
+import rectangle8_2x from '../img/webp/rectangle_8-2x.webp';
+import rectangle9_1x from '../img/webp/rectangle_9-1x.webp';
+import rectangle9_2x from '../img/webp/rectangle_9-2x.webp';
+import rectangle11_1x from '../img/webp/rectangle_11-1x.webp';
+import rectangle11_2x from '../img/webp/rectangle_11-2x.webp';
+import rectangle6_1x from '../img/webp/rectangle_6-1x.webp';
+import rectangle6_2x from '../img/webp/rectangle_6-2x.webp';
+import rectangle4_1x from '../img/webp/rectangle_4-1x.webp';
+import rectangle4_2x from '../img/webp/rectangle_4-2x.webp';
+import rectangle5_1x from '../img/webp/rectangle_5-1x.webp';
+import rectangle5_2x from '../img/webp/rectangle_5-2x.webp';
+import rectangle12_1x from '../img/webp/rectangle_12-1x.webp';
+import rectangle12_2x from '../img/webp/rectangle_12-2x.webp';
+import firstScreen1_1x from '../img/webp/first_screen_1-1x.webp';
+import firstScreen1_2x from '../img/webp/first_screen_1-2x.webp';
+
+import iconsSprite from '../img/icons/icons.svg';
+
 const projects = [
   {
-    image: './img/rectangle_10.webp',
+    image1x: rectangle10_1x,
+    image2x: rectangle10_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'power pulse webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_7.webp',
+    image1x: rectangle7_1x,
+    image2x: rectangle7_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'mimino website',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_8.webp',
+    image1x: rectangle8_1x,
+    image2x: rectangle8_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'vyshyvanka vibes Landing Page',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_9.webp',
+    image1x: rectangle9_1x,
+    image2x: rectangle9_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'green harvest online store',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_11.webp',
+    image1x: rectangle11_1x,
+    image2x: rectangle11_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'wallet webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_6.webp',
+    image1x: rectangle6_1x,
+    image2x: rectangle6_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'chego jewelry website',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_4.webp',
+    image1x: rectangle4_1x,
+    image2x: rectangle4_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'energy flow webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_5.webp',
+    image1x: rectangle5_1x,
+    image2x: rectangle5_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'fruitbox online store',
-    link: ''
+    link: '',
   },
   {
-    image: './img/rectangle_12.webp',
+    image1x: rectangle12_1x,
+    image2x: rectangle12_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'English excellence webservice',
-    link: ''
+    link: '',
   },
   {
-    image: './img/first_screen_1.webp',
+    image1x: firstScreen1_1x,
+    image2x: firstScreen1_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'starlight studio landing page',
-    link: ''
-  }
+    link: '',
+  },
 ];
+
 const projectList = document.querySelector('.my_projects-list');
 const loadMoreButton = document.getElementById('load-more');
 
@@ -67,15 +101,17 @@ let projectsLoaded = 0;
 const projectsPerClick = 3;
 
 function createMarkup(arr) {
-  return arr.map(item => `
+  return arr
+    .map(
+      item => `
     <li class="my_projects-item">
       <picture>
         <source
-          srcset="${item.image.replace('.webp', '-1x.webp')} 1x, ${item.image.replace('.webp', '-2x.webp')} 2x"
+          srcset="${item.image1x} 1x, ${item.image2x} 2x"
           type="image/webp"
         />
         <img 
-          src="${item.image.replace('.webp', '-1x.webp')}" 
+          src="${item.image1x}" 
           alt="${item.name}" 
           class="my_projects-img" 
           loading="lazy" 
@@ -91,17 +127,22 @@ function createMarkup(arr) {
         <a href="${item.link}" target="_blank" class="my_projects-button">
           VISIT
           <svg class="my_projects-icon" width="24" height="24">
-            <use href="./img/icons/icons.svg#icon-diagonal-arrow"></use>
+            <use href="${iconsSprite}#icon-diagonal-arrow"></use>
           </svg>
         </a>
       </div>
     </li>
-  `).join('');
+  `
+    )
+    .join('');
 }
-function loadProjects() {
-  const slice = projects.slice(projectsLoaded, projectsLoaded + projectsPerClick);
-  projectList.insertAdjacentHTML('beforeend', createMarkup(slice));
 
+function loadProjects() {
+  const slice = projects.slice(
+    projectsLoaded,
+    projectsLoaded + projectsPerClick
+  );
+  projectList.insertAdjacentHTML('beforeend', createMarkup(slice));
   projectsLoaded += projectsPerClick;
 
   if (projectsLoaded >= projects.length) {
@@ -110,5 +151,4 @@ function loadProjects() {
 }
 
 loadProjects();
-
 loadMoreButton.addEventListener('click', loadProjects);
