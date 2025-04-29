@@ -1,6 +1,5 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
 import axios from 'axios';
 
 const form = document.querySelector('.contacts-form');
@@ -9,18 +8,29 @@ const message = form.elements.message;
 const modal = document.querySelector('.contacts-backdrop');
 const body = document.querySelector('body');
 const closeBtn = document.querySelector('.contacts-modal-btn');
+const input = document.querySelector('.form-input');
+const correctEmailSvg = document.querySelector('.success-filled');
+const errorMessage = document.querySelector('.error-message');
+const EMAIL_PATTERN = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 form.addEventListener('submit', submitForm);
 modal.addEventListener('click', closeModal);
 closeBtn.addEventListener('click', closeModal);
 document.addEventListener('keydown', closeModal);
+input.addEventListener('input', checkValidEmail);
 
 async function submitForm(event) {
   event.preventDefault();
+  correctEmailSvg.classList.add('visually-hidden');
+  if (!isEmailValid(input.value.trim())) {
+    errorMessage.classList.remove('visually-hidden');
+    input.classList.add('error');
+    return;
+  }
   try {
     const url = 'https://portfolio-js.b.goit.study/api/requests';
     const data = {
-      email: email.value.trim(),
+      email: input.value.trim(),
       comment: message.value.trim(),
     };
     await axios.post(url, data, {
@@ -66,5 +76,19 @@ function closeModal(event) {
   ) {
     body.classList.remove('contacts-no-scroll');
     modal.classList.add('contacts-is-hidden');
+  }
+}
+
+function isEmailValid(email) {
+  return EMAIL_PATTERN.test(email);
+}
+
+function checkValidEmail() {
+  errorMessage.classList.add('visually-hidden');
+  input.classList.remove('error');
+  correctEmailSvg.classList.add('visually-hidden');
+
+  if (isEmailValid(input.value)) {
+    correctEmailSvg.classList.remove('visually-hidden');
   }
 }

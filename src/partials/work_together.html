@@ -39,13 +39,21 @@
         </address>
       </div>
       <form class="contacts-form">
-        <input
-          type="text"
-          name="email"
-          placeholder="Your email*"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          required
-        />
+        <label class="input-wrap">
+          <svg class="success-filled visually-hidden" width="16" height="16">
+            <use href="../img/icons/icons.svg#icon-success-filled"></use>
+          </svg>
+          <input
+            class="form-input"
+            type="text"
+            name="email"
+            placeholder="Your email*"
+            required
+          />
+          <span class="error-message visually-hidden"
+            >Invalid email, try again</span
+          >
+        </label>
         <textarea name="message" placeholder="Message"></textarea>
         <button type="submit">Send message</button>
       </form>
