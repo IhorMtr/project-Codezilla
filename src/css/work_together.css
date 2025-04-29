@@ -223,7 +223,7 @@
 
 @media screen and (min-width: 768px) {
   .contacts-container {
-    background-image: url(../img/work_together/decor-bg-tabl.png);
+    background-image: url(../img/decor-bg-tabl.png);
     background-repeat: no-repeat;
     background-position: right 32px top;
     padding-top: 124px;
@@ -251,7 +251,7 @@
 
 @media screen and (min-width: 1280px) {
   .contacts-container {
-    background-image: url(../img/work_together/decor-bg-desk.png);
+    background-image: url(../img/decor-bg-desk.png);
     background-repeat: no-repeat;
     background-position: right 32px top 40px;
     padding-top: 164px;
