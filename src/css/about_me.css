@@ -51,6 +51,10 @@
 }
 .about-me-education {
   margin-bottom: 40px;
+  font-weight: 300;
+}
+.about-me-role {
+  font-weight: 300;
 }
 .about-me-role-headline {
   font-size: 32px;
@@ -86,7 +90,7 @@
     font-size: 108px;
   }
   .about-me-img-wrapper {
-    width: 336px;
+    min-width: 336px;
     height: 392px;
     flex-shrink: 0;
   }
@@ -111,7 +115,7 @@
 
 @media only screen and (min-width: 1280px) {
   .about-me-img-wrapper {
-    width: 384px;
+    min-width: 384px;
     height: 448px;
     margin-top: 312px;
   }
