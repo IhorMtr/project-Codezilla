@@ -57,12 +57,8 @@
   letter-spacing: 0.03em;
   color: var(--black);
   line-height: 1.5;
-  transition: 0.3ms;
 }
 
-.footer-copyright-link:hover {
-  color: var(--accet-green);
-}
 
 @media only screen and (min-width: 768px) {
   .footer-social-link {
