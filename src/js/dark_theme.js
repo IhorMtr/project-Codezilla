@@ -1,62 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const switchButtons = document.querySelectorAll('.switch-btn');
-    const bodyElement = document.body;
-    const modalElement = document.querySelector('.modal');
-
-    function initTheme() {
-        bodyElement.classList.remove('dark-theme');
-        modalElement.classList.remove('dark-theme');
-        
-        document.querySelectorAll('.switch-light-svg').forEach(function(element) {
-            element.style.display = 'block';
-        });
-        
-        document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
-            element.style.display = 'none';
-        });
-    }
-
-    function toggleTextColors(isDark) {
-        const elements = document.querySelectorAll('body, body *:not(script):not(.span-last-name):not(.logo-header)');
-        const textColor = isDark ? 'var(--white)' : 'var(--black)';
-        
-        elements.forEach(element => {
-            element.style.color = textColor;
-        });
-    }
-
-    function toggleTheme() {
-        const isDark = bodyElement.classList.contains('dark-theme');
-        
-        if (isDark) {
-            bodyElement.classList.remove('dark-theme');
-            modalElement.classList.remove('dark-theme');
-            
-            document.querySelectorAll('.switch-light-svg').forEach(function(element) {
-                element.style.display = 'block';
-            });
-            
-            document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
-                element.style.display = 'none';
-            });
-        } else {
-            bodyElement.classList.add('dark-theme');
-            modalElement.classList.add('dark-theme');
-            
-            document.querySelectorAll('.switch-light-svg').forEach(function(element) {
-                element.style.display = 'none';
-            });
-            
-            document.querySelectorAll('.switch-dark-svg').forEach(function(element) {
-                element.style.display = 'block';
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    const THEME_KEY = 'darkTheme';
+    const themeSwitches = document.querySelectorAll(
+      '.switch-header input[type="checkbox"]'
+    );
+    const darkThemeElements = document.querySelectorAll('[data-dark-class]');
+  
+    function toggleDarkTheme(enable) {
+      darkThemeElements.forEach(el => {
+        const className = el.dataset.darkClass;
+        if (className) {
+          el.classList.toggle(className, enable);
         }
-        toggleTextColors(!isDark);
+      });
     }
-
-    initTheme();
-    
-    switchButtons.forEach(function(button) {
-        button.addEventListener('click', toggleTheme);
+  
+    const isDarkSaved = localStorage.getItem(THEME_KEY) === 'true';
+  
+    if (isDarkSaved) {
+      toggleDarkTheme(true);
+      themeSwitches.forEach(sw => (sw.checked = true));
+    }
+  
+    themeSwitches.forEach(switchInput => {
+      switchInput.addEventListener('change', function () {
+        const isChecked = this.checked;
+  
+        toggleDarkTheme(isChecked);
+  
+        if (isChecked) {
+          localStorage.setItem(THEME_KEY, 'true');
+        } else {
+          localStorage.removeItem(THEME_KEY);
+        }
+  
+        themeSwitches.forEach(sw => {
+          if (sw !== this) sw.checked = isChecked;
+        });
+      });
     });
-});
+  });
