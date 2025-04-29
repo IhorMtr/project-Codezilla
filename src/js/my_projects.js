@@ -148,6 +148,10 @@ function loadProjects() {
   if (projectsLoaded >= projects.length) {
     loadMoreButton.style.display = 'none';
   }
+
+  if (window.applyCurrentTheme) {
+    window.applyCurrentTheme();
+  }
 }
 
 loadProjects();
