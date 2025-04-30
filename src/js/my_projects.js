@@ -27,70 +27,60 @@ const projects = [
     image2x: rectangle10_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'power pulse webservice',
-    link: '',
   },
   {
     image1x: rectangle7_1x,
     image2x: rectangle7_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'mimino website',
-    link: '',
   },
   {
     image1x: rectangle8_1x,
     image2x: rectangle8_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'vyshyvanka vibes Landing Page',
-    link: '',
   },
   {
     image1x: rectangle9_1x,
     image2x: rectangle9_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'green harvest online store',
-    link: '',
   },
   {
     image1x: rectangle11_1x,
     image2x: rectangle11_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'wallet webservice',
-    link: '',
   },
   {
     image1x: rectangle6_1x,
     image2x: rectangle6_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'chego jewelry website',
-    link: '',
   },
   {
     image1x: rectangle4_1x,
     image2x: rectangle4_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'energy flow webservice',
-    link: '',
   },
   {
     image1x: rectangle5_1x,
     image2x: rectangle5_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'fruitbox online store',
-    link: '',
   },
   {
     image1x: rectangle12_1x,
     image2x: rectangle12_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'English excellence webservice',
-    link: '',
   },
   {
     image1x: firstScreen1_1x,
     image2x: firstScreen1_2x,
     stack: 'React, JavaScript, Node JS, Git',
     name: 'starlight studio landing page',
-    link: '',
   },
 ];
 
@@ -124,7 +114,7 @@ function createMarkup(arr) {
           <p class="my_projects-item-stack">${item.stack}</p>
           <h3 class="my_projects-item-header">${item.name}</h3>
         </div>
-        <a href="${item.link}" target="_blank" class="my_projects-button" data-dark-class="dark-theme-charcoal-background dark-theme-charcoal-background-hover">
+        <a href="https://github.com/IhorMtr/project-Codezilla" target="_blank" class="my_projects-button" data-dark-class="dark-theme-charcoal-background dark-theme-charcoal-background-hover">
           VISIT
           <svg class="my_projects-icon" width="24" height="24" data-dark-class="dark-theme-green-stroke dark-theme-green-fill">
             <use href="${iconsSprite}#icon-diagonal-arrow"></use>
