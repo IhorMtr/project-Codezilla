@@ -25,10 +25,6 @@
   --second-family: 'Impact', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font-family);
   margin: 0;
