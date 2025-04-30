@@ -38,6 +38,9 @@
 .hero-text-black {
   color: var(--black);
 }
+.hero-social-link a {
+  transition: 0.3s ease-in-out;
+}
 .hero-socials {
   display: flex;
   flex-direction: column;
