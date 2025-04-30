@@ -1,151 +1,77 @@
-# Коротка інформація до проєкту
+# 🌐 Codezilla — Adaptive Portfolio Landing Page
 
-### ⚠️ УВАГА!
+**Codezilla** is an adaptive landing page built as a team project during a
+frontend development course. The goal was to collaboratively design and build a
+personal portfolio website using a clean and maintainable tech stack while
+applying real-world collaboration practices.
 
-**FILL ТА STROKE ПО ДЕФОЛТУ ОБНУЛЕНІ!**
+## 🚀 Live Demo
 
-## Список іконок:
+🔗 [View Live](https://ihormtr.github.io/project-Codezilla/)
 
-| Icon Name                    | Preview                                                       |
-| ---------------------------- | ------------------------------------------------------------- |
-| **icon-arrow-narrow-right**  | ![icon-arrow-narrow-right](./assets/arrow-narrow-right.svg)   |
-| **icon-arrow-right**         | ![icon-arrow-right](./assets/arrow-right.svg)                 |
-| **icon-brush**               | ![icon-brush](./assets/brush.svg)                             |
-| **icon-chevron-down**        | ![icon-chevron-down](./assets/chevron-down.svg)               |
-| **icon-chevron-up**          | ![icon-chevron-up](./assets/chevron-up.svg)                   |
-| **icon-diagonal-arrow**      | ![icon-diagonal-arrow](./assets/diagonal-arrow.svg)           |
-| **icon-hourglass**           | ![icon-hourglass](./assets/hourglass.svg)                     |
-| **icon-location**            | ![icon-location](./assets/location.svg)                       |
-| **icon-mail**                | ![icon-mail](./assets/mail.svg)                               |
-| **icon-message-chat-circle** | ![icon-message-chat-circle](./assets/message-chat-circle.svg) |
-| **icon-phone**               | ![icon-phone](./assets/phone.svg)                             |
-| **icon-success-filled**      | ![icon-success-filled](./assets/success-filled.svg)           |
-| **icon-user**                | ![icon-user](./assets/user.svg)                               |
-| **icon-burger-btn**          | ![icon-user](./assets/burger-btn.svg)                         |
-| **icon-x**                   | ![icon-user](./assets/x.svg)                                  |
+## 💡 Features
 
----
+- Adaptive layout with media query breakpoints (not fully fluid)
+- Clean and semantic HTML structure
+- Modular CSS with reusable classes
+- Dark mode toggle with theme persistence via `localStorage`
+- Fast development and preview using **Vite**
+- Deployed with **GitHub Pages**
 
-## Корисні класи
+## ⚙️ Tech Stack
 
-- **.visually-hidden** — приховує елемент візуально, але залишає його доступним
-  для скрінрідерів.
-- **.caption** — стилі для де-яких заголовків(див. по макету).
-- **.black-theme-text** — білий колір тексту для чорної теми.
-- **.black-theme-background** - колір фону для чорної теми.
+- **HTML5**
+- **CSS3** (with media queries)
+- **JavaScript (Vanilla)**
+- **Vite**
+- **Git & GitHub**
 
----
+### 📦 JavaScript Libraries Used
 
-## Іменування гілок
+- [`axios`](https://github.com/axios/axios) — for HTTP requests
+- [`accordion-js`](https://github.com/michu2k/Accordion) — for collapsible
+  sections
+- [`izitoast`](https://github.com/marcelodolza/iziToast) — for elegant toast
+  notifications
+- [`swiper`](https://github.com/nolimits4web/swiper) — for responsive
+  sliders/carousels
 
-- **`feature/`** — для нових функцій.  
-  _Приклад:_ `feature/mobile-menu`
+## 👥 Team Members
 
-- **`bugfix/`** — для виправлення помилок.  
-  _Приклад:_ `bugfix/fix-mobile-menu-opener`
+| Name                  | GitHub Nickname                                                   | Role                    |
+| --------------------- | ----------------------------------------------------------------- | ----------------------- |
+| Ihor Motornyi         | [IhorMtr](https://github.com/IhorMtr)                             | Developer, Team Lead    |
+| Vlad Korniiko         | [VladKorniiko](https://github.com/VladKorniiko)                   | Developer, Scrum Master |
+| Onyshchenko Serhii    | [19taurus79](https://github.com/19taurus79)                       | Developer               |
+| Anton Bidenko         | [Anton1256](https://github.com/Anton1256)                         | Developer               |
+| Elmira Mammadova      | [elmira08](https://github.com/elmira08)                           | Developer               |
+| Lazebnyi Danylo       | [LazebnyiDanylo](https://github.com/LazebnyiDanylo)               | Developer               |
+| Mykhailo Sorochynskyi | [Mykhailo-Sorochynskyi](https://github.com/Mykhailo-Sorochynskyi) | Developer               |
+| Artem Shvachev        | [Shvarts91](https://github.com/Shvarts91)                         | Developer               |
 
-- **`refactor/`** — для покращення структури коду без зміни функціоналу.  
-  _Приклад:_ `refactor/clean-mobile-menu`
+## 🎯 Project Goals
 
----
+- Collaborate as a frontend team using Git & GitHub
+- Practice SCRUM methodology and role-based work distribution
+- Create a fully adaptive landing page with a clear layout and modern design
+- Use selected JavaScript libraries to extend functionality (sliders,
+  accordions, notifications, HTTP requests)
+- Implement theme toggle with state persistence
+- Deploy and maintain the final product online
 
-## Корисні Git команди
+## 🛠 How to Run Locally
 
-### Перемикання та робота з гілками
+1. Clone the repository:
 
-- `git switch -c <branch>`  
-  Створити нову гілку і одразу перемкнутись на неї.  
-  _Приклад:_ `git switch -c feature/login`
+```bash
+git clone https://github.com/IhorMtr/project-Codezilla
+cd project-Codezilla
+```
 
-- `git switch <branch>`  
-  Перемкнутись на існуючу гілку.
+2. Install dependencies and run development server:
 
-### Отримання змін та злиття
+```bash
+npm install
+npm run dev
 
-- `git pull origin main`  
-   Стягнути останні зміни з віддаленої гілки `main` і змерджити з поточною.
-
-  **!! НЕ ЗАБУДЬТЕ ЗАКОМІТИТИ СВОЮ ГІЛКУ ПЕРЕД ЦІЄЮ КОМАНДОЮ !!**
-
-- `git fetch`  
-  Отримати останні зміни з віддаленого репозиторію **без** автоматичного злиття.
-
-- `git merge <branch>`  
-  Злити вказану гілку з поточною.
-
----
-
-# Вимоги до коду
-
-## 1. Оптимізація зображень
-
-- **Перетворення JPEG → WebP**  
-  Усі файли `.jpg` / `.jpeg` потрібно конвертувати у формат `.webp`
-- **Підтримка Retina-екранів через `<picture>`**  
-   Використовуйте тег `<picture>` із джерелами для 1× та 2× щільності:
-
-  ```html
-  <picture>
-    <source
-      srcset="path/to/image-mobile-1x.jpg 1x, path/to/image-mobile-2x.jpg 2x"
-      media="(max-width: 767px)"
-    />
-
-    <source
-      srcset="path/to/image-tablet-1x.jpg 1x, path/to/image-tablet-2x.jpg 2x"
-      media="(min-width: 768px) and (max-width: 1279px)"
-    />
-
-    <source
-      srcset="path/to/image-desktop-1x.jpg 1x, path/to/image-desktop-2x.jpg 2x"
-      media="(min-width: 1280px)"
-    />
-
-    <img
-      class="example-class"
-      src="path/to/image-mobile-1x.jpg"
-      alt="example image"
-      width="example-width"
-      height="example-height"
-      loading="lazy"
-    />
-  </picture>
-  ```
-
-  loading="lazy" варто додавати до усіх зображень.
-
-  **!! Але не до зображень у секції hero !!**
-
-## 2. Структура та стиль коду
-
-Використовуйте function declarations як стандарт:
-
-function fetchData() { /_ ... _/ }
-
-Стрілкові функції => застосовуйте лише там, де це справді зручно й доцільно:
-колбеки масивів (forEach, map, тощо), обробка промісів, тощо.
-
-camelCase для всіх ідентифікаторів: let userProfile, function getUserData(),
-const postListElement.
-
-## 3. Робота з API
-
-Використовуйте Axios для всіх HTTP-запитів. Використовуйте синтаксис async/await
-для всіх запитів.
-
-import axios from 'axios';
-
-## 4. Сповіщення
-
-Для відображення повідомлень підключена бібліотека iziToast.
-
-import iziToast from 'izitoast';
-
-## 5. Обробка подій
-
-Слухачі подій додаємо іменованими функціями, щоб їх можна було зняти:
-
-function handleClick(event) { /_ ... _/ }
-
-button.addEventListener('click', handleClick); // За потреби:
-button.removeEventListener('click', handleClick);
+```
