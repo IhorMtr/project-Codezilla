@@ -82,6 +82,7 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   color: var(--black);
+  outline: none;
 }
 
 .error {
@@ -105,6 +106,7 @@
 .form-input:hover,
 .form-input:active {
   background-color: var(--hover-grey);
+  outline: 1px solid var(--accet-green);
 }
 
 .contacts-form textarea {
@@ -121,6 +123,7 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   color: var(--black);
+  outline: none;
 }
 
 .contacts-form textarea::placeholder {
@@ -130,6 +133,7 @@
 .contacts-form textarea:hover,
 .contacts-form textarea:active {
   background-color: var(--hover-grey);
+  outline: 1px solid var(--accet-green);
 }
 
 .contacts-form button {
@@ -144,6 +148,7 @@
   border: none;
   border-radius: 8px;
   transition-duration: 250ms;
+  outline: none;
 }
 
 .contacts-form button:hover,
