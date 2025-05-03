@@ -12,12 +12,22 @@
   align-items: center;
   position: relative;
   margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.hero-btn .caption {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
 }
 
 .hero-btn-arrow {
   fill: #00b068;
   height: 100%;
   margin-right: 12px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 .hero-btn-rectangle {
   position: absolute;
@@ -30,6 +40,18 @@
   width: 165px;
   height: 92px;
   transition: background-color 0.3s ease-in-out;
+}
+.hero-btn:hover .hero-btn-arrow {
+  fill: #ffffff;
+}
+
+.hero-btn:hover .caption,
+.hero-btn:hover .hero-btn-arrow {
+  transform: translateX(160px);
+}
+
+.hero-btn:hover .hero-btn-rectangle {
+  background-color: #00b068;
 }
 
 .hero-text-color {
