@@ -50,6 +50,10 @@
   transform: translateX(160px);
 }
 
+.hero-btn:hover .hero-btn-arrow {
+  fill: var(--white) !important;
+}
+
 .hero-btn:hover .hero-btn-rectangle {
   background-color: #00b068;
 }

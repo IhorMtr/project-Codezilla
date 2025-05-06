@@ -25,6 +25,10 @@
   fill: var(--white) !important;
 }
 
+.dark-theme-fill-hover:hover {
+  fill: var(--white) !important;
+}
+
 .dark-theme-green-stroke {
   stroke: var(--accet-green-dt) !important;
 }
